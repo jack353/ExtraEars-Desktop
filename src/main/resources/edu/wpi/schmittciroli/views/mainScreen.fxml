@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1250.0" stylesheets="@../styles/mainScreenStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.schmittciroli.controllers.mainScreenController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About Extra Ears" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="779.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Extra Ears" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="638.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXScrollPane prefHeight="638.0" prefWidth="325.0">
+               <content>
+                  <VBox fx:id="theaterInfoVBox" prefHeight="638.0" prefWidth="310.0" spacing="10.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></VBox>
+               </content>
+            </MFXScrollPane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="BASELINE_LEFT" prefHeight="638.0" prefWidth="325.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <MFXScrollPane prefHeight="608.0" prefWidth="325.0">
+               <content>
+                  <VBox fx:id="deviceInfoVBox" prefHeight="608.0" prefWidth="310.0" spacing="10.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></VBox>
+               </content>
+            </MFXScrollPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="310.0">
+               <children>
+                  <Label alignment="CENTER" text="Total Connected Devices:" />
+                  <Region prefHeight="30.0" prefWidth="10.0" />
+                  <Label fx:id="deviceCountLBL" text="#" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <AnchorPane prefHeight="626.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="BASELINE_CENTER" prefHeight="638.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" spacing="40.0">
+                     <children>
+                        <MFXButton fx:id="qrGenBTN" alignment="CENTER" buttonType="RAISED" prefHeight="35.0" prefWidth="175.0" text="Generate Ticket" />
+                        <MFXButton fx:id="subManagementBTN" alignment="CENTER" buttonType="RAISED" prefHeight="35.0" prefWidth="175.0" text="Movie Management" />
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <ImageView fx:id="displayImage" fitHeight="196.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-cinema-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="movieTitleLBL" text="&lt;Movie Title&gt;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="currentRuntimeLBL" text="00:00:00" />
+                        <MFXButton fx:id="decreaseMS_BTN" text="-10 ms" />
+                        <MFXButton fx:id="play_Pause_BTN" alignment="CENTER" buttonType="RAISED" minWidth="100.0" rippleAnimateShadow="true" text="Play" textAlignment="CENTER" />
+                        <MFXButton fx:id="increaseMS_BTN" text="+10 ms" />
+                        <Label fx:id="finalRuntimeLBL" text="00:00:00" />
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" spacing="30.0">
+                     <children>
+                        <Label fx:id="fileDisplayLBL" alignment="BASELINE_LEFT" text="No Subtitle Selected">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <HBox alignment="BASELINE_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Label text="Language:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label fx:id="subtitleLanguageDisplayLBL" text="&lt;LANG&gt;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets left="100.0" right="100.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

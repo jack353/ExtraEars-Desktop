@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="deviceInfoHBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="310.0" spacing="30.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.schmittciroli.controllers.deviceItemController">
+   <children>
+      <ImageView fx:id="deviceImg" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-iphone-x-50.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="deviceInfo" text="&lt;Device  Info&gt;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Region prefHeight="200.0" prefWidth="35.0" />
+      <ImageView fx:id="connectionStatusImg" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-wi-fi-connected-24.png" />
+         </image>
+      </ImageView>
+   </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</HBox>

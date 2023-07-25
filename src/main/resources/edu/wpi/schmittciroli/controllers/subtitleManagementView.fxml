@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.schmittciroli.controllers.subtitleManagementController">
+   <children>
+      <HBox fx:id="headerHBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Region prefHeight="50.0" prefWidth="200.0" />
+            <Label text="Title" />
+            <Region prefHeight="50.0" prefWidth="135.0" />
+            <Label text="Language" />
+            <Region prefHeight="50.0" prefWidth="100.0" />
+            <Label text="Select" />
+         </children>
+      </HBox>
+      <MFXScrollPane layoutY="50.0" prefHeight="350.0" prefWidth="600.0">
+         <content>
+            <VBox fx:id="subtitleListVBox" prefHeight="350.0" prefWidth="585.0" spacing="10.0">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

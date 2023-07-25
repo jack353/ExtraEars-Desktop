@@ -1,0 +1,5 @@
+HBox {
+    -fx-background-color: #b2b5be;
+    -fx-background-radius: 25px;
+    -fx-effect: dropshadow(two-pass-box, grey, 20, 0.0, 0, 0);
+}

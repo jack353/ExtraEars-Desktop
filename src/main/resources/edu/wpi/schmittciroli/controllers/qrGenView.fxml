@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/qrGenStylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.schmittciroli.controllers.qrGenController">
+   <children>
+      <VBox alignment="CENTER" layoutX="7.0" prefHeight="400.0" prefWidth="600.0" spacing="25.0">
+         <children>
+            <ImageView fx:id="qrCodeDisplayIMG" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <MFXButton fx:id="generateQRBTN" prefWidth="100.0" text="Generate" />
+                  <MFXButton fx:id="saveQRBTN" prefWidth="100.0" text="Save" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

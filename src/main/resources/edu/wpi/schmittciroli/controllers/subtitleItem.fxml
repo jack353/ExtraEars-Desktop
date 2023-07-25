@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<HBox fx:id="subsIndvHBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.schmittciroli.controllers.subtitleItemController">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </HBox.margin>
+         <image>
+            <Image url="@../images/icons8-cinema-100.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="titleLabel" alignment="CENTER" prefHeight="17.0" prefWidth="300.0" text="&lt;Movie Title&gt;">
+         <HBox.margin>
+            <Insets left="10.0" right="5.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="languageLabel" text="&lt;Language&gt;">
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </Label>
+      <Region prefHeight="50.0" prefWidth="65.0" />
+      <MFXButton fx:id="selectBTN" text="Select" />
+   </children>
+</HBox>
