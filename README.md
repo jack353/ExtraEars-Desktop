@@ -1,6 +1,6 @@
 Desktop/Server application to connect to the Extra Ears client mobile application
 
-Built to a part of WPI's Major Qualifying Project (MQP):
+Built as part of WPI's Major Qualifying Project (MQP):
 https://digital.wpi.edu/concern/student_works/z603r1896?locale=en
 
 
