@@ -1,3 +1,9 @@
+Desktop/Server application to connect to the Extra Ears client mobile application
+
+Built to a part of WPI's Major Qualifying Project (MQP):
+https://digital.wpi.edu/concern/student_works/z603r1896?locale=en
+
+
 To assemble a jar file for your project, run the "jar" gradle task, either through IntelliJ or by doing
 `gradle jar` on a terminal. Gradle will automatically download all dependencies needed to compile your jar file,
 which will be stored in the build/libs folder.
